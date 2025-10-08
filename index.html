@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interactive Portfolio — Sri Ram</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#home">Sri Ram Telukuntla</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <h1>Hi, I'm <span class="accent">Sri Ram</span></h1>
+          <p class="lead">Front-End Developer & Machine Learning Enthusiast • Building interactive web & AI projects.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn secondary" href="SriramTelukuntlaResume.pdf" download>Download Resume</a>
+          </div>
+          <div class="socials">
+            <a href="https://github.com/sriramtelukuntla" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/sriram-telukuntla-3b42a4368" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Profile Image -->
+        <div class="hero-card">
+          <img src="sriramprofilepic.jpg" alt="Sriram Telukuntla" class="profile-pic">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about" style="padding-top:0;">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div>
+            <p>I’m a final-year Information Technology student with hands-on experience in Java, Python, and Machine Learning. I have worked on MRI-based Brain Tumor Detection projects using Deep Learning (CNN & Vision Transformers) and am passionate about web development and AI.</p>
+            <ul class="info-list">
+              <li><strong>Location:</strong> Hyderabad, India</li>
+              <li><strong>Education:</strong> B.Tech in Information Technology, Bharat Institute of Engineering and Technology</li>
+              <li><strong>Email:</strong> sriramgupta2004@gmail.com</li>
+              <li><strong>Phone:</strong> +91-8639842718</li>
+              <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/sriram-telukuntla-3b42a4368" title="LinkedIn"><i class="fab fa-linkedin"></i> Profile</a></li>
+            </ul>
+          </div>
+          <div class="skills-preview">
+            <h3>Quick Skills</h3>
+            <div class="skill-pill">Python</div>
+            <div class="skill-pill">Java</div>
+            <div class="skill-pill">Machine Learning</div>
+            <div class="skill-pill">Prompt Engineering</div>
+            <div class="skill-pill">C</div>
+            <div class="skill-pill">JavaScript</div>
+            <div class="skill-pill">React.js</div>
+            <div class="skill-pill">HTML & CSS</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">
+            <h4>Front-end</h4>
+            <p>HTML, CSS, JavaScript, React.js, Responsive Design</p>
+          </div>
+          <div class="skill">
+            <h4>Programming</h4>
+            <p>Python, Java, C</p>
+          </div>
+          <div class="skill">
+            <h4>Machine Learning</h4>
+            <p>Deep Learning, CNN, Vision Transformers, TensorFlow, Keras, OpenCV</p>
+          </div>
+          <div class="skill">
+            <h4>Tools</h4>
+            <p>Git, VS Code, Google Colab</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="ml">ML/AI</button>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+          <!-- Brain Tumor Detection Project -->
+          <article class="project-card" data-type="ml">
+            <div class="project-body">
+              <h3>MRI-Based Brain Tumor Detection</h3>
+              <p>Deep Learning project using CNN & Vision Transformers to classify brain MRI scans into No Tumor, Glioma, Meningioma, and Pituitary. Compared models for accuracy and interpretability.</p>
+              <div class="project-links">
+                <a href="https://github.com/sriramtelukuntla/MRI-BRAIN-TUMOR" target="_blank">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Other GitHub projects -->
+          <article class="project-card" data-type="web">
+            <div class="project-body">
+              <h3>Todo List Cloud</h3>
+              <p>Cloud-based to-do list application with user authentication and storage.</p>
+              <div class="project-links">
+                <a href="https://github.com/sriramtelukuntla/Todo__list_cloud" target="_blank">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-type="web">
+            <div class="project-body">
+              <h3>Random User Generator</h3>
+              <p>Generates random user data using API calls and displays it dynamically.</p>
+              <div class="project-links">
+                <a href="https://github.com/sriramtelukuntla/Randomuser" target="_blank">Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-type="web">
+            <div class="project-body">
+              <h3>Calculator</h3>
+              <p>A simple calculator project implemented using JavaScript.</p>
+              <div class="project-links">
+                <a href="https://github.com/sriramtelukuntla/calculator" target="_blank">Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn">Send Message</button>
+              <div id="form-status" class="form-status" aria-live="polite"></div>
+            </div>
+          </form>
+          <div class="contact-info">
+            <h3>Let's build something together</h3>
+            <p>Prefer email? 
+              <a href="mailto:sriramgupta2004@gmail.com?subject=Hello%20Sri%20Ram&body=Hi%20Sri%20Ram,%0D%0A%0D%0AI%20would%20like%20to%20connect%20with%20you.%0D%0A%0D%0ABest%20regards," target="_blank">
+                sriramgupta2004@gmail.com
+              </a>
+            </p>
+            <ul class="contact-list">
+              <li><i class="fas fa-map-marker-alt"></i> Hyderabad, India</li>
+              <li><i class="fas fa-phone"></i> +91-8639842718</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sriram Telukuntla </p>
+      <p><small>Hosted on GitHub Pages</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
